@@ -16,8 +16,8 @@ class Solution(object):
             return res
 
         else:
-            intervals = intervals.sort( key = lambda x:x.start )
-            print intervals
+            intervals = sorted( intervals, key = lambda x:x.start )
+            
             newInterval = intervals[0]
 
             for interval in intervals[1:]:
@@ -32,6 +32,8 @@ class Solution(object):
 
             res.append( newInterval )
 
+            # for interval in res:
+            #     print [interval.start, interval.end]
             return res
 
 
