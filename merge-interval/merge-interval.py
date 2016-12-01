@@ -1,4 +1,19 @@
-# Definition for an interval.
+'''
+Given a collection of intervals, merge all overlapping intervals.
+
+For example,
+Given [1,3],[2,6],[8,10],[15,18],
+return [1,6],[8,10],[15,18].
+
+
+Author: Phil H. Cui
+Date: 11/30/16
+
+'''
+
+
+
+
 class Interval(object):
     def __init__(self, s=0, e=0):
         self.start = s
@@ -17,7 +32,7 @@ class Solution(object):
 
         else:
             intervals = sorted( intervals, key = lambda x:x.start )
-            
+
             newInterval = intervals[0]
 
             for interval in intervals[1:]:

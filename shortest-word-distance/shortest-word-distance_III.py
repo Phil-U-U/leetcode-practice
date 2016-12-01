@@ -24,26 +24,27 @@ class Solution( object ):
         isNew = False
 
         while i < len(words):
-            if self.words[i] == word1:
-                '''
-                For the case when the two words are the same
-                '''
-                if idx1 is not None:
-                    dist = min( dist, abs(idx1-i) )  # 只要比较相邻的最小值即可
+            if word1 == word2:
+                if self.words[i] == word1: # For the case when the two words are the same
 
-                idx1 = i
-                isNew = True
+                    if idx1 is None:
+                        idx1 = i
+                    else:
+                        dist = min( dist, abs(idx1-i) )
 
-            elif self.words[i] == word2:
-                idx2 = i
-                isNew = True
+            else:# word1 != word2
+                if self.words[i] == word1:
+                    idx1 = i
+                    isNew = True
+
+                elif self.words[i] == word2:
+                    idx2 = i
+                    isNew = True
 
 
-            if isNew == True and idx1 is not None and idx2 is not None:
+                if isNew == True and idx1 is not None and idx2 is not None:
                     dist = min( dist, abs(idx1 - idx2) )
                     isNew = False
-
-
 
             i += 1
 
@@ -51,11 +52,11 @@ class Solution( object ):
 
 
 if __name__ == '__main__':
-    words = ["practice", "makes", "perfect", "coding", "makes"]
+    words = ["practice", "makes", "makes", "perfect", "coding"]
     word1, word2 = "coding", "practice"
     word3, word4 = "makes", "coding"
     word5, word6 = "makes", "makes"
     solution = Solution( words )
-    print 3 - solution.calcShortestDist( word1, word2 )
-    print 1 - solution.calcShortestDist( word3, word4 )
-    print 3 - solution.calcShortestDist( word5, word6 )
+    print 4 - solution.calcShortestDist( word1, word2 )
+    print 2 - solution.calcShortestDist( word3, word4 )
+    print 1 - solution.calcShortestDist( word5, word6 )

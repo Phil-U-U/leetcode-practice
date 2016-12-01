@@ -12,6 +12,8 @@ Given "foo", "bar", return false.
 
 Given "paper", "title", return true.
 
+Author: Phil H. Cui
+Date: 12/01/16
 '''
 
 class Solution( object ):
