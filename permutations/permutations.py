@@ -15,6 +15,9 @@ For example,
 Author: Phil H. Cui
 Date: 12/02/16
 
+[2,3]
+[3,2]
+
 '''
 
 
@@ -24,17 +27,22 @@ class Solution(object):
         :type nums: List[int]
         :rtype: List[List[int]]
         """
-
-        # DFS, Queue
+        # Divide and Conquer, Recursion
         res = []
-        queue = []
 
-        while( queue ):
-            node = queue.pop(0)
-            
+        if len(nums) == 1:
 
+            return [nums]
 
+        for i, num in enumerate(nums):
 
+            rest = nums[:i] + nums[i+1:]
+
+            for restPermutation in self.permute( rest ):
+                # print restPermutation will see why return [nums]: for loop get an element from list, list of list
+                res.append( [nums[i]] + restPermutation )
+
+        return res
 
 if __name__ == '__main__':
     nums = [1,2,3]
