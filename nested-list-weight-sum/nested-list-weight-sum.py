@@ -16,6 +16,9 @@ Date: 12/01/16
 class Solution(object):
     # DFS, Recursion
     def calcSum( self, l, depth = 1 ):
+        if type(l) == int:
+            return l * depth
+
         res = 0
         for ele in l:
             if type(ele) == int:
