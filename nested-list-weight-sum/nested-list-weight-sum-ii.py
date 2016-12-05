@@ -38,7 +38,9 @@ if __name__ == "__main__":
     l1 = [[1,1],2,[1,1]]
     l2 = [1,[4,[6]]]
     l3 = [ [[[1,1]]], 2, [1,1]]
+    l4 = [ [[1,1]] ]
     solution = Solution()
     print "{}-{}".format(8, solution.calcSum(l1) )
     print "{}-{}".format(17, solution.calcSum(l2) )
     print "{}-{}".format(12, solution.calcSum(l3) )
+    print solution.calcSum(l4)
