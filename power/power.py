@@ -2,7 +2,7 @@
 Implement pow(x, n).
 
 Author: Phil H. Cui
-Date: 12/05/16
+Date: 12/06/16
 '''
 
 
@@ -17,7 +17,15 @@ class Solution(object):
         :rtype: float
         """
 
-        pass
+        if n == 0:
+            return 1
+        elif n < 0:
+            return 1.0 / self.myPow( x, -n )
+        else: # n > 0:
+            if n % 2 == 0:  # even
+                return self.myPow( x*x, n/2 ) # return self.myPow( x, n/2 ) **2  # 
+            else: # n % 2 != 0   # odd
+                return x * self.myPow( x, n-1 )
 
 
 if __name__ == "__main__":
