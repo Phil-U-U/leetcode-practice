@@ -31,7 +31,7 @@ class TreeNode(object):
 
 class Solution(object):
 
-    def lowestCommonAncestor(self, root, p, q):
+    def lowestCommonAncestor_1(self, root, p, q):
         """
         :type root: TreeNode
         :type p: TreeNode
@@ -39,7 +39,7 @@ class Solution(object):
         :rtype: TreeNode
         """
         # Base case (also case 1)
-        if root == None or root.val == p.val or root.val == q.val:
+        if root in (None, p, q):
             return root
 
         # Case 2: if p, q exist in both branches, return root
@@ -49,11 +49,20 @@ class Solution(object):
         if searchLeft != None and searchRight != None:
             return root
 
+
         # Case 3: if one of the branches returns None, continue to search the other branch
         if searchLeft == None:
             return searchRight
         else:
             return searchLeft
+
+    def lowestCommonAncestor(self, root, p, q):
+        if root in ( None, p, q):
+            return root
+
+        searchLeft, searchRight = [self.lowestCommonAncestor(child, p, q) for child in (root.left, root.right)]
+
+        return root if searchLeft and searchRight else searchLeft or searchRight
 
 if __name__ == "__main__":
     root = TreeNode(3)
@@ -66,5 +75,5 @@ if __name__ == "__main__":
     root.right.left = TreeNode(0)
     root.right.right = TreeNode(8)
 
-    print Solution().lowestCommonAncestor( root, TreeNode(5), TreeNode(1) ).val
-    print Solution().lowestCommonAncestor( root, TreeNode(5), TreeNode(4) ).val
+    print Solution().lowestCommonAncestor_1( root, TreeNode(5), TreeNode(1) )
+    print Solution().lowestCommonAncestor_1( root, TreeNode(5), TreeNode(4) )
