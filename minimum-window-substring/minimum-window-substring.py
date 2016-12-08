@@ -30,4 +30,5 @@ class Solution(object):
 
 
 if __name__ == "__main__":
-    print Solution().
+    s, t = "ADOBECODEBANC", "ABC"
+    print Solution().minWindow( s, t )
