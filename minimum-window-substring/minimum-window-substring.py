@@ -18,17 +18,62 @@ Date: 12/08/16
 
 '''
 class Solution(object):
-    def minWindow(self, s, t):
+    def minWindow(self, S, T):
         """
         :type s: str
         :type t: str
         :rtype: str
         """
-        if t == "":
+        cur_count, expected_count = {}, {}  #count lookup， expected_count： "set the standard"
+
+        i, start = 0, 0  # i: scan pointer, # start marks the start of the window
+        min_start, min_width = 0, float("inf")  # return result s[min_start:min_start+min_width]
+        cnt = 0 # number of character in t that has been included in the window
+
+        for char in T:
+            if char not in expected_count:
+                expected_count[char] = 1
+                cur_count[char] = 0
+            else:
+                expected_count[char] += 1
+
+
+
+        while i < len(S):
+
+            # Move the second window bar to where all letters in T are included,
+            if S[i] in T:
+                cur_count[ S[i] ] += 1
+
+            # After the window includes T, no longer functions.
+            if S[i] in T and cur_count[ S[i] ] <= expected_count[ S[i] ]:
+                cnt += 1
+
+            # Shrink the first window bar to a minimum window that include all letters in T
+            if cnt == len(T):
+                while S[start] not in T or cur_count[ S[start] ] > expected_count[ S[start] ]  :
+                # cur_count[ S[start] ]的值会被cur_count[ S[i] ]的更新而修改，从而触发循环开始而shrink window到最优
+                    if S[start] in T:
+                        cur_count[ S[start] ] -= 1
+                    start += 1
+
+                if i - start + 1 < min_width:
+                    min_start = start
+                    min_width = i - start + 1
+                    print S[min_start:min_start+min_width]
+
+            print S[i], cur_count, expected_count
+            i += 1
+
+
+        if min_width == float("inf"):
             return ""
+        else:
+            return S[min_start:min_start+min_width]
 
 
 
 if __name__ == "__main__":
-    s, t = "ADOBECODEBANC", "ABC"
-    print Solution().minWindow( s, t )
+    # S, T = "ADOBECODEBANC", "ABC"
+    S, T = "ebadbaccb", "abc"
+    print Solution().minWindow( S, T )
