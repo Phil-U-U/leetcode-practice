@@ -11,6 +11,8 @@ If there is no such window in S that covers all characters in T, return the empt
 
 If there are multiple such windows, you are guaranteed that there will always be only one unique minimum window in S.
 
+双指针，动态维护一个区间。尾指针不断往后扫，当扫到有一个窗口包含了所有T的字符后，然后再收缩头指针，直到不能再收缩为止。最后记录所有可能的情况中窗口最小的.
+http://www.cnblogs.com/TenosDoIt/p/3461301.html
 
 Author: Phil H. Cui
 Date: 12/08/16
@@ -19,17 +21,12 @@ Date: 12/08/16
 '''
 class Solution(object):
     def minWindow(self, S, T):
-        """
-        :type s: str
-        :type t: str
-        :rtype: str
-        """
+        """ :type s: str  :type t: str :rtype: str """
         cur_count, expected_count = {}, {}  #count lookup， expected_count： "set the standard"
 
         i, start = 0, 0  # i: scan pointer, # start marks the start of the window
         min_start, min_width = 0, float("inf")  # return result s[min_start:min_start+min_width]
         cnt = 0 # number of character in t that has been included in the window
-
         for char in T:
             if char not in expected_count:
                 expected_count[char] = 1
@@ -37,10 +34,7 @@ class Solution(object):
             else:
                 expected_count[char] += 1
 
-
-
         while i < len(S):
-
             # Move the second window bar to where all letters in T are included,
             if S[i] in T:
                 cur_count[ S[i] ] += 1
@@ -64,7 +58,6 @@ class Solution(object):
 
             print S[i], cur_count, expected_count
             i += 1
-
 
         if min_width == float("inf"):
             return ""

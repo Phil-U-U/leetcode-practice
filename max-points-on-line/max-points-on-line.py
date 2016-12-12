@@ -31,10 +31,10 @@ class Solution(object):
         for i, start in enumerate( points ):
             # lookup:
             # (1) key is slope, value is the number of points have the same slope
-            # (2) summarize for those lines passing points[i], how many points lying on each line.
-            # (3) for those lines contain more than two points, the maximum number of points are counted correctly at the beginning,
+            # (2) For those lines passing points[i], count how many points lying on each line.
+            # (3) For those lines contain more than two points, the maximum number of points are counted correctly at the beginning,
             # i.e. the future counting will miss those points at the beginning, but this case is covered by former counting.
-            # on the contrary, if there's no overlapping, then the future counting will not miss any points.
+            # On the contrary, if there's no overlapping, then the future counting will not miss any points.
             # So, overall, the maximum can be found in iterating each of the n*(n-1)/2 lines.
             lookup = {}
             same_points = 1

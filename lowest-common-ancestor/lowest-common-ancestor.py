@@ -42,13 +42,12 @@ class Solution(object):
         if root in (None, p, q):
             return root
 
-        # Case 2: if p, q exist in both branches, return root
         searchLeft = self.lowestCommonAncestor( root.left, p, q )
         searchRight = self.lowestCommonAncestor( root.right, p, q )
 
+        # Case 2: if p, q exist in both branches, return root
         if searchLeft != None and searchRight != None:
             return root
-
 
         # Case 3: if one of the branches returns None, continue to search the other branch
         if searchLeft == None:

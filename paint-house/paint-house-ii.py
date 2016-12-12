@@ -35,17 +35,18 @@ class Solution( object ):
         for i in xrange(1,n):
             smallest, second_smallest = float('inf'), float('inf')
 
+            # Find smallest and second_smallest for each row.
             for j in xrange(k):
                 if min_cost[(i - 1) % 2][j] < smallest:
                     smallest, second_smallest = min_cost[(i - 1) % 2][j], smallest
                 elif  min_cost[(i - 1) % 2][j] < second_smallest:
                     second_smallest =  min_cost[(i - 1) % 2][j]
 
+            # Non-Smallest column for row i-1 <-> Smallest for row i;
+            # Smallest column for row i-1 <-> Second smallest for row i;
             for j in xrange(k):
-
                 min_j = smallest if min_cost[(i - 1) % 2][j] != smallest else second_smallest
                 min_cost[i % 2][j] = costs[i][j] + min_j
-
 
         return min(min_cost[ (n-1) % 2 ])
 

@@ -13,7 +13,29 @@ Date: 12/01/16
 '''
 
 class Solution(object):
-    def search(self, nums, target):
+    def search(self, A, target):
+        low, high = 0, len(A)
+
+        while low < high:
+            mid = low + (high - low) / 2
+
+            if A[mid] == target:
+                return mid
+
+            if A[low] <= A[mid]: # Left half is sorted
+                if A[low] <= target and target < A[mid]:
+                    high = mid
+                else:
+                    low = mid + 1
+            else:               # Right half is sorted
+                if A[mid] < target and target <= A[high - 1]:
+                    low = mid + 1
+                else:
+                    high = mid
+
+        return -1
+
+    def search_Phil(self, nums, target):
         """
         :type nums: List[int]
         :type target: int
@@ -37,4 +59,4 @@ class Solution(object):
 
             cnt += 1
 
-        return -1   
+        return -1
