@@ -1,6 +1,5 @@
 '''
 Given an integer, convert it to a roman numeral.
-
 Input is guaranteed to be within the range from 1 to 3999.
 
 字母可以重复，但不超过三次，当需要超过三次时，用与下一位的组合表示：
@@ -10,7 +9,6 @@ C: 100, CC: 200, CCC: 300, CD: 400
 
 Author: Phil H. Cui
 Date: 12/12/16
-
 '''
 class Solution(object):
     def intToRoman(self, num):
@@ -30,7 +28,6 @@ class Solution(object):
         # 998 = 900 + 90 + 8
         #       CM  + XC + VIII
 
-
         # 588 = 500 + 80 + 8
         #       D     LXXX  VIII
         #       D     XXC   VIII
@@ -38,9 +35,11 @@ class Solution(object):
         # 3978 = 3000 + 900 + 70 + 8
         #        MMM    CM    LXX  VIII
 
+        # 3778 = 3000 + 700 + 70 +  8
+        #        MMM    DCC   LXX  VIII
         res = ""
         romans = ["M", "CM", "D", "CD", "C",  "XC", "L", "XL","X","IX","V","IV","I"]
-        val =    [1000, 900, 500, 400,   100,   90,  50,  40,  10, 9,   5,   4,  1]
+        val =    [1000, 900, 500, 400,  100,   90,  50,  40,  10,  9,   5,  4,  1]
 
         for i, roman in enumerate(romans):
             if num >= val[i]:
