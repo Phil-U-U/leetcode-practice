@@ -33,8 +33,6 @@ class Solution(object):
         if not str:
             return None
 
-
-
         start = 0
         for i, char in enumerate(str):
             if char != ' ':
@@ -52,8 +50,9 @@ class Solution(object):
             return None
 
         for i, char in enumerate(str):
-            
+            if char[0]
 
+            # ord, result * 10 + x
 
 
 if __name__ == "__main__":
