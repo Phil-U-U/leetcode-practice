@@ -13,11 +13,13 @@ Leetcode-Amazon
 ---------------------------------------------------------------------------
 8. String to Integer(atoi)                            Easy
 155. Min Stack                                        Easy
+204. Count Primes                                     Easy
+206. Reverse Linked List - Iterative                  Easy
 
 
 ----------------------- To be finished ------------------------
-204. Count Primes                                     Easy
-206. Reverse Linked List - Iterative                  Easy
+
+
 242. Valid Anagram                                    Easy
 
 5. Longest Palindromic Substring - Center Expand/DP   Medium
