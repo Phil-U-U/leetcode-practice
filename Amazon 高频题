@@ -8,12 +8,14 @@ Leetcode-Amazon
 160. Intersection of Two Linked Lists                 Easy
 235. Lowest Common Ancestor of a Binary Search Tree - BST Property        Easy
 102. Binary Tree Level Order Traversal - BFS          Easy
+100. Same Tree.cpp                                    Easy
+
+---------------------------------------------------------------------------
+8. String to Integer(atoi)                            Easy
+155. Min Stack                                        Easy
 
 
 ----------------------- To be finished ------------------------
-8. String to Integer(atoi)                            Easy
-100. Same Tree.cpp                                    Easy
-155. Min Stack                                        Easy
 204. Count Primes                                     Easy
 206. Reverse Linked List - Iterative                  Easy
 242. Valid Anagram                                    Easy
