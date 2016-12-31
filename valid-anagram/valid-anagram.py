@@ -11,10 +11,41 @@ You may assume the string contains only lowercase alphabets.
 
 Author: Phil H. Cui
 Date: 12/31/16
+'''
+
+
+class Solution:
+    # @param {string} s
+    # @param {string} t
+    # @return {boolean}
+    def isAnagram(self, s, t):
+        if len(s) != len(t):
+            return False
+
+        count = {}
+
+        for c in s:
+            if c.lower() in count:
+                count[c.lower()] += 1
+            else:
+                count[c.lower()] = 1
+
+        for c in t:
+            if c.lower() in count:
+                count[c.lower()] -= 1
+            else:
+                count[c.lower()] = -1
+            if count[c.lower()] < 0:
+                return False
+
+        return True
+
 
 '''
+Use Counter
+'''
 from collections import Counter
-class Solution( object ):
+class Solution2( object ):
     def isAnagram(self, s, t):
         """
         :type s: str
@@ -34,9 +65,7 @@ class Solution( object ):
             if s_letters[letter] == 0:
                 s_letters.pop(letter)
 
-
         return True
-
 
 if __name__ == "__main__":
     s, t = "anagram", "nagaram"
