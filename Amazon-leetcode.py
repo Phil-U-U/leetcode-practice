@@ -2,31 +2,31 @@
 Amazon Interview Questions
 Leetcode-Amazon
 
+---------------------------------------------------------------------------
 1. Two Sum.cpp                                        Medium
 20. Valid Parentheses                                 Easy
 21. Merge Two Sorted Lists                            Easy
 160. Intersection of Two Linked Lists                 Easy
-235. Lowest Common Ancestor of a Binary Search Tree - BST Property        Easy
-102. Binary Tree Level Order Traversal - BFS          Easy
-100. Same Tree.cpp                                    Easy
-
-206. Reverse Linked List - Iterative                  Easy
 242. Valid Anagram                                    Easy
-98. Valid Binary Search Tree                          Medium
 167. Two Sum II - Input array is sorted               Medium
 48. Rotate Image                                      Medium
----------------------------------------------------------------------------
+186. Reverse Words in a String II                     Medium
+----
+206. Reverse Linked List - Iterative                  Easy
+98. Valid Binary Search Tree                          Medium
+235. Lowest Common Ancestor of a Binary Search Tree - BST Property        Easy
+102. Binary Tree Level Order Traversal - BFS          Easy
+100. Same Tree
+
+---
 8. String to Integer(atoi)                            Easy
 155. Min Stack                                        Easy
 204. Count Primes                                     Easy
 
 
-186. Reverse Words in a String II                     Medium
+89. Gray Code                                         Medium
 ----------------------- To be finished ------------------------
 
-
-
-89. Gray Code                                         Medium
 64. Minimal Path Sum  - Binary Tree                   Medium
 
 Reverse Second Half of Linked List
