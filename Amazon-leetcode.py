@@ -10,26 +10,33 @@ Leetcode-Amazon
 102. Binary Tree Level Order Traversal - BFS          Easy
 100. Same Tree.cpp                                    Easy
 
+206. Reverse Linked List - Iterative                  Easy
+242. Valid Anagram                                    Easy
+98. Valid Binary Search Tree                          Medium
+167. Two Sum II - Input array is sorted               Medium
+48. Rotate Image                                      Medium
 ---------------------------------------------------------------------------
 8. String to Integer(atoi)                            Easy
 155. Min Stack                                        Easy
 204. Count Primes                                     Easy
-206. Reverse Linked List - Iterative                  Easy
-242. Valid Anagram                                    Easy
 
 
+186. Reverse Words in a String II                     Medium
 ----------------------- To be finished ------------------------
 
-5. Longest Palindromic Substring - Center Expand/DP   Medium
+
+
 89. Gray Code                                         Medium
-98. Valid Binary Search Tree                          Medium
 64. Minimal Path Sum  - Binary Tree                   Medium
-48. Rotate Image                                      Medium
+
+Reverse Second Half of Linked List
+K Nearest Point to the Origin
+subtree
+
+5. Longest Palindromic Substring - Center Expand/DP   Medium
 49. Group Anagrams- Sort                              Medium
 78. Subsets - Bit Manipulation                        Medium
 
-167. Two Sum II - Input array is sorted               Medium
-186. Reverse Words in a String II                     Medium
 199. Binary Tree Right Side View                      Medium
 200. Number of Islands - BFS, Union and Find          Medium
 
@@ -37,8 +44,8 @@ Leetcode-Amazon
 146. LRU Cache                                        Hard
 23. Merge K Sorted Lists - Priority Queue             Hard
 239. Sliding Maximum Window - deque                   Hard
-K Nearest Point to the Origin
-Reverse Second Half of Linked List
+
+
 
 
 
