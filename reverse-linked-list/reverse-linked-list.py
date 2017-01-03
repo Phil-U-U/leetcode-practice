@@ -19,36 +19,11 @@ class ListNode(object):
         return "{}->{}".format( self.val, self.next )
 
 class Solution(object):
-    def reverseList(self, head):
+    def reverseList_1(self, head):
         """
         :type head: ListNode
         :rtype: ListNode
         """
-
-    # dummy -> None , head = 1   ->  2   -> 3
-
-    # dummy ->  1
-    # 1 ->   None
-    # head  = 2
-
-    # dummy -> 2
-    # head -> 2
-    # head = 3
-
-
-        # dummy = ListNode(float("-inf"))
-        # while head:
-        #
-        #     dummy.next, head.next, head = head, dummy.next, head.next
-        #
-        #
-        #     print dummy.next
-        #     # print dummy.next
-        #     print head
-        #     # print head.next
-        #
-        # return dummy.next
-
         dummy = ListNode( float("-inf"))  # dummpy points to already reversed linked list
 
         while head:
@@ -61,6 +36,42 @@ class Solution(object):
 
             # print dummy, head
             # equivalent to: dummy.next, head.next, head = head, dummy.next, head.next
+
+        return dummy.next
+
+
+    def reverseList( self, head ):
+        # dummy points to reversed list
+        # head leads the node that haven't been reversed
+        # read one node a time and put it to the reversed linked list
+        # （1）dummy 指向刚摘下来／新读进来的node， （2）这个node被修改指向dummy原来指向的node
+        # head 往后挪动一位
+
+        # 1 -> 2 -> 3 -> None
+
+        # dummy -> None
+        # head = 1 -> 2 -> 3 -> None
+
+        # dummy -> 1  # dummy.next = head: dummy points to the node that just being picked up from original list
+        # 1 -> None (Now: dummy -> 1 -> None)  # head.next = dummy.next, here dummy is from last loop)
+        # head = 2 -> 3  # head = head.next 
+        
+        # dummy -> 2   
+        # 2 -> 1 -> None  ( dummy -> 2 -> 1 -> None )
+        # head = 3 -> None
+        
+
+        # dummy -> 3
+        # 3 -> 2 -> 1 -> None
+        # head = None
+        # Now: dummy -> 3 -> 2 -> 1 -> None
+        
+
+        dummy = ListNode( float("-inf") )   
+
+        while head:
+
+            dummy.next, head.next, head = head, dummy.next, head.next
 
         return dummy.next
 

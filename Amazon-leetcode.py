@@ -11,8 +11,12 @@ Leetcode-Amazon
 167. Two Sum II - Input array is sorted               Medium
 48. Rotate Image                                      Medium
 186. Reverse Words in a String II                     Medium
-----
+89. Gray Code                                         Medium
 206. Reverse Linked List - Iterative                  Easy
+206(2). Reverse Second Half of Linked Lists     	  Medium
+49. Group Anagrams- Sort                              Medium
+----
+
 98. Valid Binary Search Tree                          Medium
 235. Lowest Common Ancestor of a Binary Search Tree - BST Property        Easy
 102. Binary Tree Level Order Traversal - BFS          Easy
@@ -24,17 +28,19 @@ Leetcode-Amazon
 204. Count Primes                                     Easy
 
 
-89. Gray Code                                         Medium
+
 ----------------------- To be finished ------------------------
+
+
 
 64. Minimal Path Sum  - Binary Tree                   Medium
 
-Reverse Second Half of Linked List
+
 K Nearest Point to the Origin
 subtree
 
 5. Longest Palindromic Substring - Center Expand/DP   Medium
-49. Group Anagrams- Sort                              Medium
+
 78. Subsets - Bit Manipulation                        Medium
 
 199. Binary Tree Right Side View                      Medium
