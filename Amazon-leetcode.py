@@ -14,7 +14,10 @@ Leetcode-Amazon
 89. Gray Code                                         Medium
 206. Reverse Linked List - Iterative                  Easy
 206(2). Reverse Second Half of Linked Lists     	  Medium
-49. Group Anagrams- Sort                              Medium
+49. Group Anagrams- Sort, Hashmap                     Medium
+23. Merge K Sorted Lists - Priority Queue             Hard
+64. Minimal Path Sum 				                  Medium
+199. Binary Tree Right Side View(DFS and BFS)         Medium
 ----
 
 98. Valid Binary Search Tree                          Medium
@@ -27,29 +30,26 @@ Leetcode-Amazon
 155. Min Stack                                        Easy
 204. Count Primes                                     Easy
 
-
-
 ----------------------- To be finished ------------------------
 
-
-
-64. Minimal Path Sum  - Binary Tree                   Medium
-
-
 K Nearest Point to the Origin
+239. Sliding Maximum Window - deque                   Hard
+
+
 subtree
 
 5. Longest Palindromic Substring - Center Expand/DP   Medium
-
-78. Subsets - Bit Manipulation                        Medium
-
-199. Binary Tree Right Side View                      Medium
 200. Number of Islands - BFS, Union and Find          Medium
 
-
+78. Subsets - Bit Manipulation                        Medium
 146. LRU Cache                                        Hard
-23. Merge K Sorted Lists - Priority Queue             Hard
-239. Sliding Maximum Window - deque                   Hard
+
+
+
+
+
+
+
 
 
 
