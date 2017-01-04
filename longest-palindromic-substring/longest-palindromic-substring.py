@@ -5,7 +5,7 @@ Input: "babad"; Output: "bab"; Note: "aba" is also a valid answer.
 Input: "cbbd"; Output: "bb"
 
 Author: Phil H. Cui
-Date: 12/26/16
+Date: 01/04/2017
 '''
 
 

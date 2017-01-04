@@ -21,24 +21,37 @@ Leetcode-Amazon
 200. Number of Islands - BFS, Union and Find          Medium
 78. Subsets - Bit Manipulation                        Medium
 K Nearest Point to the Origin  -- heap
+98. Valid Binary Search Tree                          Medium
 ----
 
-98. Valid Binary Search Tree                          Medium
+
+BST:对于当前node，左子树最大节点值 < node.val < 右子树最小节点值 
 235. Lowest Common Ancestor of a Binary Search Tree - BST Property        Easy
 102. Binary Tree Level Order Traversal - BFS          Easy
 100. Same Tree
 
 ---
-8. String to Integer(atoi)                            Easy
+8. String to Integer (atoi)                            Easy
 155. Min Stack                                        Easy
 204. Count Primes                                     Easy
+000. Largest Binary Search Subtree(largest-bst-subtree)  	Hard
+	Note: check tree traversal, then O(n) solution, which is fun!
 
 ----------------------- To be finished ------------------------
-largest-bst-subtree
 
-5. Longest Palindromic Substring - Center Expand/DP   Medium
 239. Sliding Maximum Window - deque                   Hard
 146. LRU Cache                                        Hard
+5. Longest Palindromic Substring - Center Expand/DP   Medium
+
+
+Tree Traversal in all kinds of orders
+BFS
+DFS
+总结，那些题用bfs,dfs, e.g. 看到K max, min就用heap
+Computer Science 文档:
+http://wdxtub.com/interview/14520597062776.html
+
+
 
 
 

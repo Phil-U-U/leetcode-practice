@@ -33,7 +33,7 @@ Author: Phil H. Cui
 Date: 12/31/16
 
 '''
-
+# DFS: middle -> left -> right
 # Definition for a binary tree node.
 class TreeNode(object):
     def __init__(self, x):
@@ -48,7 +48,7 @@ class Solution(object):
         if not root:
             return True
 
-        return low < root.val and high > root.val \
+        return low < root.val and root.val < high \
             and self.helper( root.left, low, root.val ) \
             and self.helper( root.right, root.val, high )
 
