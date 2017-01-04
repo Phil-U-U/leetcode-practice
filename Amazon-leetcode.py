@@ -19,6 +19,8 @@ Leetcode-Amazon
 64. Minimal Path Sum 				                  Medium
 199. Binary Tree Right Side View(DFS and BFS)         Medium
 200. Number of Islands - BFS, Union and Find          Medium
+78. Subsets - Bit Manipulation                        Medium
+K Nearest Point to the Origin  -- heap
 ----
 
 98. Valid Binary Search Tree                          Medium
@@ -32,14 +34,10 @@ Leetcode-Amazon
 204. Count Primes                                     Easy
 
 ----------------------- To be finished ------------------------
-K Nearest Point to the Origin
-239. Sliding Maximum Window - deque                   Hard
-
-subtree
+largest-bst-subtree
 
 5. Longest Palindromic Substring - Center Expand/DP   Medium
-
-78. Subsets - Bit Manipulation                        Medium
+239. Sliding Maximum Window - deque                   Hard
 146. LRU Cache                                        Hard
 
 
