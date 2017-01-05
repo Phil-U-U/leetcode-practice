@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*- 
 '''
 Given an array nums, there is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window. Each time the sliding window moves right by one position.
 
@@ -26,6 +28,8 @@ Date: 01/04/2017
 
 '''
 
+# from heapq import heappush, heappop
+from collections import deque
 
 class Solution(object):
     def maxSlidingWindow(self, nums, k):
@@ -35,3 +39,35 @@ class Solution(object):
         :rtype: List[int]
         """
         
+        res, d = [], deque()
+        curMax, curMax2 = float("-inf"), float("-inf")
+
+        for x in nums[:k]:
+        	
+        	d.append(x)
+        	if x > curMax:
+        		curMax, curMax2 = x, curMax
+        		
+        	elif x > curMax2:
+        		curMax2 = x
+
+        res.append(curMax)
+
+        for i, x in enumerate( nums[k:] ):	
+        	if d.popleft() == curMax:
+        		curMax = curMax2
+
+        		
+
+        	if x > curMax:
+        		res.append(x)
+        		curMax = x
+        	else:
+        		res.append(curMax)	
+        	
+
+        return res	
+
+if __name__ == "__main__":
+	nums, k = [1,  3,  -1,  -3,  5,  3,  6,  7], 3
+	print Solution().maxSlidingWindow( nums, k )

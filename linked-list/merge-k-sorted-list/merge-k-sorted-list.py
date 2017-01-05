@@ -55,8 +55,6 @@ class Solution(object):
         	if left:
         		heappush( heap, (left.val, left) )
 
-
-
         return dummy.next
 
 if __name__ == "__main__":
