@@ -51,7 +51,7 @@ class Solution(object):
 		if not node:
 			return
 
-		if depth > len(res):
+		if depth > len(res):  # only one node is peeked at each layer
 			res.append(node.val)
 
 		self.rightSideView_DFS( node.right, depth+1, res )

@@ -3,7 +3,7 @@ Amazon Interview Questions
 Leetcode-Amazon
 
 ---------------------------------------------------------------------------
-1. Two Sum.cpp                                        Medium
+1. Two Sum	                                          Medium
 20. Valid Parentheses                                 Easy
 21. Merge Two Sorted Lists                            Easy
 160. Intersection of Two Linked Lists                 Easy
@@ -15,7 +15,7 @@ Leetcode-Amazon
 206. Reverse Linked List - Iterative                  Easy
 206(2). Reverse Second Half of Linked Lists     	  Medium
 49. Group Anagrams- Sort, Hashmap                     Medium
-23. Merge K Sorted Lists - Priority Queue             Hard
+23. Merge K Sorted Lists - Priority Queue/heap        Hard
 64. Minimal Path Sum 				                  Medium
 199. Binary Tree Right Side View(DFS and BFS)         Medium
 200. Number of Islands - BFS, Union and Find          Medium
@@ -29,13 +29,14 @@ BST:对于当前node，左子树最大节点值 < node.val < 右子树最小节�
 235. Lowest Common Ancestor of a Binary Search Tree - BST Property        Easy
 102. Binary Tree Level Order Traversal - BFS          Easy
 100. Same Tree
+000. Largest Binary Search Subtree(largest-bst-subtree)  	Hard
+	Note: check tree traversal, then O(n) solution, which is fun!
 
 ---
 8. String to Integer (atoi)                            Easy
 155. Min Stack                                        Easy
 204. Count Primes                                     Easy
-000. Largest Binary Search Subtree(largest-bst-subtree)  	Hard
-	Note: check tree traversal, then O(n) solution, which is fun!
+
 
 ----------------------- To be finished ------------------------
 
